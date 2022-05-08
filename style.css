@@ -3,7 +3,7 @@ Theme Name:BirdBLOCKS
 Theme URI: https: //github.com/sysbird/birdblocks
 Author: Sysbird
 Author URI: https://profiles.wordpress.org/sysbird/
-Description: TT1 Blocks is an experimental block-based version of the Twenty Twenty-One theme. It is built to leverage the full-site editing functionality that is being built in the Gutenberg plugin. This theme is not meant for use on a production site.
+Description: BirdBLOCKS is a block-based theme for WordPress.
 Requires at least: 5.9
 Tested up to: 5.9
 Requires PHP: 5.9
@@ -11,9 +11,9 @@ Version: 0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: birdblocks
-Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+Tags: one-column, custom-colors, custom-menu, editor-style, featured-images, full-site-editing, rtl-language-support, sticky-post, threaded-comments
 
-BirdBLOCKS WordPress Theme, (C) 2020 WordPress.org
+BirdBLOCKS WordPress Theme, (C) 2022 sysbird
 BirdBLOCKS is distributed under the terms of the GNU GPL.
 
 Normalizing styles have been helped along thanks to the fine work of Nicolas Gallagher and Jonathan Neal https: //necolas.github.io/normalize.css/
