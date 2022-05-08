@@ -1,0 +1,442 @@
+/*
+Theme Name:BirdBLOCKS
+Theme URI: https: //github.com/sysbird/birdblocks
+Author: Sysbird
+Author URI: https://profiles.wordpress.org/sysbird/
+Description: TT1 Blocks is an experimental block-based version of the Twenty Twenty-One theme. It is built to leverage the full-site editing functionality that is being built in the Gutenberg plugin. This theme is not meant for use on a production site.
+Requires at least: 5.9
+Tested up to: 5.9
+Requires PHP: 5.9
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: birdblocks
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+
+BirdBLOCKS WordPress Theme, (C) 2020 WordPress.org
+BirdBLOCKS is distributed under the terms of the GNU GPL.
+
+Normalizing styles have been helped along thanks to the fine work of Nicolas Gallagher and Jonathan Neal https: //necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# - Normalize
+# - Typography
+# - Elements
+# - Forms
+# - Accessibility
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Normalize
+--------------------------------------------------------------*/
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	position: relative;
+	vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 0;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-size: 1em;
+	font-family: monospace;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+	color: inherit;
+	font: inherit;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	box-sizing: content-box;
+	-webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+	border: 1px solid #c0c0c0;
+}
+
+legend {
+	padding: 0;
+	border: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# - Typography
+--------------------------------------------------------------*/
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	overflow: auto;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
+	max-width: 100%;
+	background: rgba(0, 0, 0, 0.025);
+	font-family: monospace;
+	line-height: 1.4;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-size: 0.9375rem;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# - Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff;
+	/* Fallback for when there is no custom background color defined. */
+}
+
+blockquote {
+	margin: 0 0 1.5em;
+	padding-left: 1.5em;
+	border-left: 4px solid #242424;
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+blockquote p {
+	margin-bottom: 0.75em;
+}
+
+blockquote cite {
+	display: block;
+	color: #242424;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+blockquote cite:before {
+	content: "\2014\00a0";
+}
+
+hr {
+	margin-bottom: 1.5em;
+	height: 1px;
+	border: 0;
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em;
+	padding: 0 0 0 1.25em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li>ul,
+li>ol {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 1.5em;
+}
+
+ul ul,
+ol ul {
+	list-style-type: circle;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 1.5em;
+}
+
+img {
+	max-width: 100%;
+	/* Adhere to container width. */
+	height: auto;
+	/* Make sure images are scaled correctly. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	border: none;
+	table-layout: fixed;
+}
+
+th,
+td {
+	padding: 0.4em 0.6em;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/*--------------------------------------------------------------
+# - Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	position: absolute !important;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	top: 5px;
+	left: 5px;
+	z-index: 100000;
+	/* Above WP toolbar. */
+	display: block;
+	clip: auto !important;
+	padding: 15px 23px 14px;
+	width: auto;
+	height: auto;
+	border-radius: 3px;
+	background-color: #f1f1f1;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	color: #21759b;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: normal;
+}
+
+/*--------------------------------------------------------------
+# - Post
+--------------------------------------------------------------*/
+.wp-block-post-title a {
+	text-decoration: none;
+}
+
+.wp-block-post-title a:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+}
